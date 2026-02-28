@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mr. Boba Tea | Khammam's First Bubble Tea Shop</title>
+    <meta name="description"
+        content="Khammam's first bubble tea shop offering freshly brewed teas, creamy blends, and refreshing fruit flavors topped with your choice of boba.">
+    <meta property="og:title" content="Mr. Boba Tea | Khammam's First Bubble Tea Shop">
+    <meta property="og:description"
+        content="Khammam's first bubble tea shop offering freshly brewed teas, creamy blends, and refreshing fruit flavors topped with your choice of boba.">
+    <meta property="og:type" content="website">
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Playfair Display', serif
+        }
+
+        .grain::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 100
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0)
+            }
+
+            33% {
+                transform: translateY(-8px) rotate(2deg)
+            }
+
+            66% {
+                transform: translateY(-4px) rotate(-1deg)
+            }
+        }
+
+        .boba-float {
+            animation: float 4s ease-in-out infinite
+        }
+
+        .boba-float-d1 {
+            animation: float 4s ease-in-out 1.5s infinite
+        }
+
+        .boba-float-d2 {
+            animation: float 4s ease-in-out 3s infinite
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp .8s ease-out forwards;
+            opacity: 0
+        }
+
+        .fd1 {
+            animation-delay: .1s
+        }
+
+        .fd2 {
+            animation-delay: .2s
+        }
+
+        .fd3 {
+            animation-delay: .3s
+        }
+
+        .fd4 {
+            animation-delay: .4s
+        }
+
+        .fd5 {
+            animation-delay: .5s
+        }
+
+        .sb {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: .8rem;
+            font-weight: 500
+        }
+
+        @keyframes slideR {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            50% {
+                transform: translateX(4px)
+            }
+        }
+
+        .flow-arrow {
+            animation: slideR 1.5s ease-in-out infinite
+        }
+
+        @keyframes gp {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+        }
+
+        .gentle-pulse {
+            animation: gp 3s ease-in-out infinite
+        }
+    </style>
+</head>
+
+<body class="bg-[#FDFCF8] text-[#3E2723] antialiased selection:bg-[#BCAAA4] selection:text-white pb-20 grain">
+
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 w-full border-b border-[#3E2723]/5 bg-[#FDFCF8]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="8" y="6" width="16" height="20" rx="3" stroke="#6D4C41" stroke-width="1.5" fill="none" />
+                    <line x1="8" y1="10" x2="24" y2="10" stroke="#6D4C41" stroke-width="1.5" />
+                    <circle cx="13" cy="20" r="2" fill="#3E2723" />
+                    <circle cx="19" cy="20" r="2" fill="#3E2723" />
+                    <circle cx="16" cy="17" r="2" fill="#3E2723" />
+                    <line x1="16" y1="2" x2="16" y2="6" stroke="#6D4C41" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="14" y1="3" x2="18" y2="3" stroke="#6D4C41" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <span class="text-2xl font-medium tracking-tight text-[#3E2723] serif">Mr. Boba Tea 🧋</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-lg font-normal text-[#5D4037]">
+                <a href="#what-is-boba" class="hover:text-[#3E2723] transition-colors">What's Boba?</a>
+                <a href="#milk-tea" class="hover:text-[#3E2723] transition-colors">Menu</a>
+                <a href="#how-its-made" class="hover:text-[#3E2723] transition-colors">How It's Made</a>
+                <a href="#order-flow" class="hover:text-[#3E2723] transition-colors">Order</a>
+            </div>
+            <button
+                class="hidden md:flex items-center gap-2 bg-[#3E2723] text-[#FDFCF8] px-5 py-2.5 rounded-full text-lg font-medium hover:bg-[#5D4037] transition-all shadow-sm hover:shadow-md">
+                <span>Visit Us 📍</span><i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+            </button>
+            <button class="md:hidden text-[#3E2723]" aria-label="Open mobile menu"><i data-lucide="menu" class="w-7 h-7"
+                    stroke-width="1.5"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="pt-24 pb-12 px-6 max-w-7xl mx-auto text-center relative overflow-hidden">
+        <div class="absolute top-16 left-[10%] boba-float opacity-20">
+            <div class="w-8 h-8 rounded-full bg-[#3E2723]"></div>
+        </div>
+        <div class="absolute top-32 right-[15%] boba-float-d1 opacity-15">
+            <div class="w-6 h-6 rounded-full bg-[#6D4C41]"></div>
+        </div>
+        <div class="absolute bottom-8 left-[20%] boba-float-d2 opacity-10">
+            <div class="w-5 h-5 rounded-full bg-[#8D6E63]"></div>
+        </div>
+        <p class="text-[#8D6E63] uppercase tracking-widest text-sm font-medium mb-4 fade-up fd1">🫧 Khammam's First
+            Bubble Tea Shop 🫧</p>
+        <h1 class="text-6xl md:text-8xl font-medium tracking-tight text-[#3E2723] mb-6 fade-up fd2">Mr. Boba Tea</h1>
+        <p class="text-xl md:text-2xl text-[#5D4037] font-light max-w-2xl mx-auto leading-relaxed fade-up fd3">Freshly
+            brewed teas, creamy blends, and refreshing fruit flavors — each topped with your choice of boba 🧋✨</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10 fade-up fd4">
+            <div class="flex items-center gap-2 px-4 py-2 bg-[#3E2723]/5 rounded-full"><span>🥤</span><span
+                    class="text-base font-medium text-[#5D4037]">Small ₹149</span></div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-[#3E2723]/5 rounded-full"><span>🧋</span><span
+                    class="text-base font-medium text-[#5D4037]">Regular ₹199</span></div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-[#3E2723]/5 rounded-full"><span>🥛</span><span
+                    class="text-base font-medium text-[#5D4037]">Lassi ₹129</span></div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-[#3E2723]/5 rounded-full"><span>⊕</span><span
+                    class="text-base font-medium text-[#5D4037]">Toppings +₹30</span></div>
+        </div>
+        <div class="mt-8 fade-up fd5">
+            <div
+                class="inline-flex items-center gap-3 px-6 py-3 bg-[#3E2723]/[0.03] rounded-2xl border border-[#3E2723]/5">
+                <span>🍬</span><span class="text-sm text-[#5D4037] font-medium">Sweetness Levels:</span><span
+                    class="text-sm text-[#5D4037]/70">Standard · Less Sweet · No Sugar</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- WHAT IS BOBA -->
+    <section id="what-is-boba" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="bg-[#3E2723]/[0.03] rounded-3xl border border-[#3E2723]/5 p-10 md:p-14 relative overflow-hidden">
+            <div class="absolute top-6 right-8 boba-float opacity-10">
+                <div class="w-10 h-10 rounded-full bg-[#3E2723]"></div>
+            </div>
+            <div class="text-center mb-10">
+                <p class="text-[#8D6E63] uppercase tracking-widest text-sm font-medium mb-3">🤔 New to Boba?</p>
+                <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-[#3E2723] serif">What is Boba Tea? 🧋
+                </h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6 text-center">
+                <p class="text-xl text-[#5D4037] font-light leading-relaxed">Boba tea (also called <strong
+                        class="font-medium">bubble tea</strong>) is a fun, flavorful drink that originated in Taiwan in
+                    the 1980s 🇹🇼. It combines freshly brewed tea with milk, fruit flavors, or both — served ice-cold
+                    with chewy tapioca pearls at the bottom!</p>
+                <p class="text-lg text-[#5D4037]/80 font-light leading-relaxed">The "boba" refers to the soft, chewy
+                    tapioca balls 🟤 made from cassava root. They sink to the bottom of your drink and you sip them up
+                    through a wide straw — it's a drink and a snack in one! 🤤</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
+                <div class="text-center p-5 bg-[#FDFCF8] rounded-2xl border border-[#3E2723]/5">
+                    <div class="text-3xl mb-3">🍵</div>
+                    <h4 class="font-semibold text-[#3E2723] text-sm">Freshly Brewed Tea</h4>
+                    <p class="text-xs text-[#5D4037]/70 mt-1 font-light">Assam black tea or jasmine green tea as the
+                        base</p>
+                </div>
+                <div class="text-center p-5 bg-[#FDFCF8] rounded-2xl border border-[#3E2723]/5">
+                    <div class="text-3xl mb-3">🥛</div>
+                    <h4 class="font-semibold text-[#3E2723] text-sm">Creamy Milk</h4>
+                    <p class="text-xs text-[#5D4037]/70 mt-1 font-light">Full cream for that smooth, velvety texture</p>
+                </div>
+                <div class="text-center p-5 bg-[#FDFCF8] rounded-2xl border border-[#3E2723]/5">
+                    <div class="text-3xl mb-3">🫧</div>
+                    <h4 class="font-semibold text-[#3E2723] text-sm">Flavor Magic</h4>
+                    <p class="text-xs text-[#5D4037]/70 mt-1 font-light">Fruit syrups, powders, or frozen fruits for
+                        amazing taste</p>
+                </div>
+                <div class="text-center p-5 bg-[#FDFCF8] rounded-2xl border border-[#3E2723]/5">
+                    <div class="text-3xl mb-3">🟤</div>
+                    <h4 class="font-semibold text-[#3E2723] text-sm">Chewy Boba</h4>
+                    <p class="text-xs text-[#5D4037]/70 mt-1 font-light">Tapioca pearls, fruit jellies, or popping boba
+                        on top</p>
+                </div>
+            </div>
+            <p class="text-center text-[#8D6E63] text-sm mt-10 font-medium">Today, boba tea is loved by millions
+                worldwide 🌍 — and now it's here in Khammam! 🎉</p>
+        </div>
+    </section>
+
+    <!-- MENU HEADER -->
+    <div class="max-w-7xl mx-auto px-6 mb-8 text-center">
+        <p class="text-[#8D6E63] uppercase tracking-widest text-sm font-medium mb-3">📋 Our Menu</p>
+        <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-[#3E2723] serif">Drink Menu ✨</h2>
+    </div>
+
+    <!-- MENU GRID -->
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-20">
+        <!-- Col 1 -->
+        <div class="flex flex-col gap-16">
+
+            <!-- Milk Tea -->
+            <section id="milk-tea">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Flavored Milk Tea 🍵</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Base: Assam Black Tea · Full
+                    Cream · Shaken</p>
+                <div class="space-y-7" id="milk-tea-items"></div>
+            </section>
+
+            <!-- Fruit Tea -->
+            <section id="fruit-tea">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Fruit Tea 🍊</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Base: Jasmine Green Tea · No
+                    Milk · Shaken</p>
+                <div class="space-y-7" id="fruit-tea-items"></div>
+            </section>
+
+            <!-- Lassi -->
+            <section id="lassi">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Boba Lassi 🥛</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Base: Fresh Curd/Yogurt ·
+                    Blended · One Size ₹129</p>
+                <div class="space-y-7" id="lassi-items"></div>
+            </section>
+
+        </div>
+
+        <!-- Col 2 -->
+        <div class="flex flex-col gap-16">
+
+            <!-- Fruit Blend -->
+            <section id="fruit-blend">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Fruit Blend 🍹</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Base: Jasmine Green Tea ·
+                    Frozen Fruit · No Milk · Blended</p>
+                <div class="space-y-7" id="fruit-blend-items"></div>
+            </section>
+
+            <!-- Milk Blend -->
+            <section id="milk-blend">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Milk Blend 🥤</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Base: Assam Black Tea · Full
+                    Cream · Blended</p>
+                <div class="space-y-7" id="milk-blend-items"></div>
+            </section>
+
+            <!-- Toppings -->
+            <section id="toppings">
+                <div class="flex items-center gap-4 mb-3">
+                    <h2 class="text-4xl font-medium tracking-tight text-[#3E2723]">Toppings 🫧</h2>
+                    <div class="h-px bg-[#3E2723]/10 flex-grow"></div>
+                </div>
+                <p class="text-sm text-[#8D6E63] mb-8 font-medium uppercase tracking-wider">Add any topping to your
+                    drink · ₹30 each</p>
+                <div class="grid grid-cols-1 gap-10">
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#3E2723] mb-4">🟤 Tapioca Pearls</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Black Boba</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Tutti Frutti Boba</span><span>+₹30</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#3E2723] mb-4">🍮 Boba Jelly</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Strawberry Jelly</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Pineapple Jelly</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Lychee Jelly</span><span>+₹30</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-[#3E2723] mb-4">💥 Popping Boba</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Lychee</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Black Currant</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Mango</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Blueberry</span><span>+₹30</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center text-lg font-light text-[#5D4037] px-4 py-3 bg-[#3E2723]/[0.02] rounded-xl">
+                                <span class="font-normal text-[#3E2723]">Strawberry</span><span>+₹30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- HOW IT'S MADE -->
+    <section id="how-its-made" class="max-w-7xl mx-auto px-6 mt-24">
+        <div class="text-center mb-14">
+            <p class="text-[#8D6E63] uppercase tracking-widest text-sm font-medium mb-3">👨‍🍳 Behind The Counter</p>
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-[#3E2723] serif">How Your Boba is Made ✨
+            </h2>
+            <p class="text-lg text-[#5D4037]/70 font-light mt-4 max-w-2xl mx-auto">Every drink is freshly prepared to
+                order using our perfectly crafted formulas.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="process-cards"></div>
+    </section>
+
+    <!-- ORDER FLOW -->
+    <section id="order-flow" class="max-w-7xl mx-auto px-6 mt-24">
+        <div class="text-center mb-14">
+            <p class="text-[#8D6E63] uppercase tracking-widest text-sm font-medium mb-3">🛒 How To Order</p>
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-[#3E2723] serif">Order in 5 Easy Steps 🎉
+            </h2>
+            <p class="text-lg text-[#5D4037]/70 font-light mt-4">Your perfect boba is just a few choices away!</p>
+        </div>
+
+        <!-- Desktop -->
+        <div class="hidden md:flex items-stretch justify-between gap-4 max-w-6xl mx-auto" id="order-steps-desktop">
+        </div>
+
+        <!-- Mobile -->
+        <div class="md:hidden space-y-4 max-w-sm mx-auto" id="order-steps-mobile"></div>
+
+        <!-- Example Order -->
+        <div class="mt-14 max-w-3xl mx-auto">
+            <div class="bg-[#3E2723] rounded-3xl p-8 md:p-10 text-[#FDFCF8] text-center">
+                <p class="text-[#BCAAA4] uppercase tracking-widest text-xs font-medium mb-3">💡 Example Order</p>
+                <p class="text-2xl font-medium serif mb-3">"One Taro Milk Tea, Regular, Standard Sweet, with Black Boba
+                    please!" 🧋</p>
+                <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
+                    <span class="px-3 py-1 bg-[#FDFCF8]/10 rounded-full">🧋 Milk Tea</span>
+                    <span class="px-3 py-1 bg-[#FDFCF8]/10 rounded-full">🟣 Taro</span>
+                    <span class="px-3 py-1 bg-[#FDFCF8]/10 rounded-full">📏 Regular ₹199</span>
+                    <span class="px-3 py-1 bg-[#FDFCF8]/10 rounded-full">🍬 Standard</span>
+                    <span class="px-3 py-1 bg-[#FDFCF8]/10 rounded-full">🟤 Black Boba +₹30</span>
+                </div>
+                <p class="text-[#BCAAA4] text-lg mt-4 font-medium">Total: ₹229 ✨</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-24 border-t border-[#3E2723]/5 bg-[#FDFCF8] py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                    <rect x="8" y="6" width="16" height="20" rx="3" stroke="#6D4C41" stroke-width="1.5" fill="none" />
+                    <line x1="8" y1="10" x2="24" y2="10" stroke="#6D4C41" stroke-width="1.5" />
+                    <circle cx="13" cy="20" r="2" fill="#3E2723" />
+                    <circle cx="19" cy="20" r="2" fill="#3E2723" />
+                    <circle cx="16" cy="17" r="2" fill="#3E2723" />
+                    <line x1="16" y1="2" x2="16" y2="6" stroke="#6D4C41" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="14" y1="3" x2="18" y2="3" stroke="#6D4C41" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <span class="text-2xl font-medium tracking-tight text-[#3E2723] serif">Mr. Boba Tea 🧋</span>
+            </div>
+            <div class="text-center md:text-left">
+                <p class="text-[#5D4037] text-sm">📍 Khammam, Telangana</p>
+                <p class="text-[#5D4037]/50 text-xs mt-1">Khammam's First Bubble Tea Shop 🫧</p>
+            </div>
+            <div class="flex items-center gap-6 text-[#5D4037]">
+                <a href="#" class="hover:text-[#3E2723] transition-colors" aria-label="Instagram"><i
+                        data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#3E2723] transition-colors" aria-label="Facebook"><i
+                        data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#3E2723] transition-colors" aria-label="Phone"><i data-lucide="phone"
+                        class="w-5 h-5"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-xs text-[#5D4037]/50 uppercase tracking-widest">*All prices inclusive ·
+            Toppings extra at ₹30 each</div>
+        <div class="text-center mt-3 text-xs text-[#5D4037]/30">© 2026 Mr. Boba Tea. All rights reserved. Made with 🤎
+            in Khammam</div>
+    </footer>
+
+    <script>
+        // Menu Data
+        const milkTea = [
+            { e: '🍵', n: 'Matcha Love', d: 'Premium Japanese matcha blended with creamy milk tea for an earthy, smooth finish' },
+            { e: '🥭', n: 'Mango Milk Tea', d: 'Rich Alphonso mango flavor swirled into velvety milk tea' },
+            { e: '🍓', n: 'Strawberry Milk Tea', d: 'Sweet berry goodness meets creamy Assam tea — a fruity classic' },
+            { e: '🍯', n: 'Butterscotch Milk Tea', d: 'Warm, caramel-like butterscotch blended into a comforting milk tea' },
+            { e: '🧡', n: 'Papaya Milk Tea', d: 'Tropical papaya paired with smooth milk tea for a unique, refreshing twist' },
+            { e: '🍈', n: 'Honeydew Milk Tea', d: 'Light and fragrant melon flavor in a silky, creamy tea base' },
+            { e: '🍍', n: 'Piña Colada Milk Tea', d: 'Pineapple and coconut come together in this tropical milk tea escape' },
+            { e: '☕', n: 'Coffee Mocha', d: 'Bold coffee meets chocolate in a rich, indulgent milk tea treat' },
+            { e: '💜', n: 'Blueberry Milk Tea', d: 'Bursting with berry flavor, a sweet and vibrant milk tea choice' },
+            { e: '🍫', n: 'Chocolate Milk Tea', d: 'Rich, creamy chocolate perfectly balanced with Assam black tea' },
+            { e: '🟣', n: 'Taro Milk Tea', d: 'The iconic purple milk tea — nutty, subtly sweet, and irresistibly smooth' },
+            { e: '🧡', n: 'Thai Milk Tea', d: 'Classic Thai-style orange tea with aromatic spices and creamy milk' },
+        ];
+        const fruitTea = [
+            { e: '🍈', n: 'Honeydew Fruit Tea', d: 'Cool melon sweetness in a light, refreshing jasmine green tea' },
+            { e: '🍊', n: 'Orange Kumquat Tea', d: 'Bright citrus burst with tangy kumquat — zesty and invigorating' },
+            { e: '🐉', n: 'Dragon Fruit Tea', d: 'Exotic pink dragon fruit in a delicate green tea — stunning and refreshing' },
+            { e: '🥭', n: 'Mango Fruit Tea', d: 'Juicy mango meets jasmine tea — a tropical fan favorite' },
+            { e: '💛', n: 'Passion Fruit Tea', d: 'Bold, tangy passion fruit with a floral jasmine tea base — vibrant and addictive' },
+            { e: '🍓', n: 'Strawberry Fruit Tea', d: 'Sweet strawberry sunshine in every sip — light, fruity, and utterly refreshing' },
+        ];
+        const lassiItems = [
+            { e: '🤍', n: 'Plain Lassi', d: 'Classic creamy yogurt lassi — simple, cool, and timeless' },
+            { e: '💚', n: 'Pistachio Lassi', d: 'Nutty pistachio blended into thick yogurt — rich and aromatic' },
+            { e: '🍌', n: 'Banana Lassi', d: 'Ripe banana and creamy yogurt — naturally sweet and filling' },
+            { e: '🌹', n: 'Rose Lassi', d: 'Delicate rose essence in silky yogurt — fragrant and refreshing' },
+            { e: '🥭', n: 'Mango Lassi', d: 'The ultimate crowd-pleaser — luscious mango in creamy yogurt bliss' },
+        ];
+        const fruitBlend = [
+            { e: '🍈', n: 'Honeydew Blend', d: 'Frosty melon smoothie with jasmine tea — cool and revitalizing' },
+            { e: '🍊', n: 'Orange Kumquat Blend', d: 'Tangy citrus frozen into a thick, refreshing slush' },
+            { e: '🐉', n: 'Dragon Fruit Blend', d: 'Vibrant pink frozen dragon fruit — Instagram-worthy and delicious' },
+            { e: '🥭', n: 'Mango Blend', d: 'Thick, frosty mango smoothie — like summer in a cup' },
+            { e: '💛', n: 'Passion Fruit Blend', d: 'Tangy, tropical passion fruit frozen into a bold, icy delight' },
+            { e: '🍓', n: 'Strawberry Blend', d: 'Frozen strawberries blended to perfection — thick, sweet, and dreamy' },
+        ];
+        const milkBlend = [
+            { e: '🍵', n: 'Matcha Milk Blend', d: 'Creamy frozen matcha — earthy, smooth, and perfectly thick' },
+            { e: '🟣', n: 'Taro Milk Blend', d: 'Purple taro frozen into a thick, nutty, creamy milkshake-style blend' },
+            { e: '🍫', n: 'Chocolate Milk Blend', d: 'Frozen chocolate cream — rich, decadent, and impossible to resist' },
+            { e: '☕', n: 'Coffee Mocha Blend', d: 'Bold coffee and chocolate frozen into a creamy, energizing frappe' },
+            { e: '🥭', n: 'Mango Milk Blend', d: 'Creamy Alphonso mango frozen with milk — a tropical milkshake dream' },
+            { e: '🍓', n: 'Strawberry Milk Blend', d: 'Frozen strawberry cream — sweet, pink, and absolutely luscious' },
+        ];
+
+        function renderItems(containerId, items, type) {
+            const c = document.getElementById(containerId);
+            const html = items.map(item => {
+                const isLassi = type === 'lassi';
+                const priceHTML = isLassi
+                    ? `<span class="sb bg-[#3E2723]/10 text-[#3E2723]">₹129</span>`
+                    : `<div class="flex items-center gap-3"><span class="sb bg-[#3E2723]/5 text-[#5D4037]">S ₹149</span><span class="sb bg-[#3E2723]/10 text-[#3E2723]">R ₹199</span></div>`;
+                return `<div class="group"><div class="flex justify-between items-baseline"><h3 class="text-xl font-medium text-[#3E2723]">${item.e} ${item.n}</h3>${priceHTML}</div><p class="text-lg text-[#5D4037]/80 font-light mt-1 leading-relaxed">${item.d}</p></div>`;
+            }).join('');
+            c.innerHTML = html;
+        }
+        renderItems('milk-tea-items', milkTea, 'tea');
+        renderItems('fruit-tea-items', fruitTea, 'tea');
+        renderItems('lassi-items', lassiItems, 'lassi');
+        renderItems('fruit-blend-items', fruitBlend, 'tea');
+        renderItems('milk-blend-items', milkBlend, 'tea');
+
+        // Process Cards
+        const processes = [
+            { emoji: '🍵', title: 'Milk Tea', formula: 'Brewed Black Tea (Assam) + Flavor Powder + Full Cream + Sugar(pumps) + Ice → Shake → Add Toppings' },
+            { emoji: '🍊', title: 'Fruit Tea', formula: 'Brewed Green Tea (Jasmine) + Fruit Syrup + Sugar(pumps) + Ice → Shake → Add Toppings' },
+            { emoji: '�', title: 'Boba Lassi', formula: 'Fresh Curd/Yogurt + Flavor Syrup + Sugar(pumps) + Ice → Blend → Add Popping Boba' },
+            { emoji: '🍹', title: 'Fruit Blend', formula: 'Brewed Green Tea (Jasmine) + Frozen Fruit + Simple Syrup (pumps) + Ice → Blend → Add Toppings' },
+            { emoji: '�', title: 'Milk Blend', formula: 'Brewed Black Tea (Assam) + Frozen Fruit/Flavor Powder + Full Cream + Simple Syrup (pumps) + Ice → Blend → Add Toppings' },
+        ];
+        const pc = document.getElementById('process-cards');
+        pc.innerHTML = processes.map(p => {
+            return `<div class="bg-[#3E2723]/[0.03] rounded-3xl border border-[#3E2723]/5 p-8 flex flex-col justify-center h-full">
+        <div class="flex items-center gap-3 mb-4"><span class="text-3xl">${p.emoji}</span><h3 class="text-xl font-medium text-[#3E2723] serif">${p.title}</h3></div>
+        <p class="text-base text-[#5D4037]/80 font-medium leading-relaxed">${p.formula}</p>
+    </div>`;
+        }).join('');
+
+        // Order Steps
+        const orderSteps = [
+            { num: 1, emoji: '🧋', title: 'Pick Your Drink', desc: 'Milk Tea, Fruit Tea, Fruit Blend, Milk Blend, or Lassi' },
+            { num: 2, emoji: '🎨', title: 'Choose Your Flavor', desc: 'Mango, Taro, Matcha, Strawberry, and many more!' },
+            { num: 3, emoji: '📏', title: 'Select Your Size', desc: 'Small ₹149 or Regular ₹199 (Lassi ₹129 one size)' },
+            { num: 4, emoji: '🍬', title: 'Set Sweetness', desc: 'Standard · Less Sweet · No Sugar — you decide!' },
+            { num: 5, emoji: '🫧', title: 'Add Toppings', desc: 'Boba, jelly, or popping boba — +₹30 each (optional)' },
+        ];
+
+        // Desktop
+        const dsk = document.getElementById('order-steps-desktop');
+        dsk.innerHTML = orderSteps.map((s, i) => {
+            const bg = s.num === 5 ? 'bg-[#8D6E63]' : 'bg-[#3E2723]';
+            const delay = i * 0.5;
+            let html = `<div class="flex-1 text-center">
+        <div class="${bg} text-[#FDFCF8] w-14 h-14 rounded-full flex items-center justify-center text-xl font-semibold mx-auto mb-4 gentle-pulse" style="animation-delay:${delay}s">${s.num}</div>
+        <div class="bg-[#3E2723]/[0.03] rounded-2xl border border-[#3E2723]/5 p-6 h-full">
+            <div class="text-3xl mb-3">${s.emoji}</div>
+            <h4 class="font-semibold text-[#3E2723] text-lg mb-2">${s.title}</h4>
+            <p class="text-sm text-[#5D4037]/70 font-light">${s.desc}</p>
+        </div>
+    </div>`;
+            if (i < orderSteps.length - 1) {
+                html += `<div class="flex items-center flow-arrow text-[#BCAAA4] text-2xl pt-8" style="animation-delay:${i * 0.3}s">→</div>`;
+            }
+            return html;
+        }).join('');
+
+        // Mobile
+        const mob = document.getElementById('order-steps-mobile');
+        mob.innerHTML = orderSteps.map((s, i) => {
+            const bg = s.num === 5 ? 'bg-[#8D6E63]' : 'bg-[#3E2723]';
+            let html = `<div class="flex items-center gap-4">
+        <div class="${bg} text-[#FDFCF8] w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold flex-shrink-0">${s.num}</div>
+        <div class="bg-[#3E2723]/[0.03] rounded-2xl border border-[#3E2723]/5 p-4 flex-1">
+            <div class="flex items-center gap-3"><span class="text-2xl">${s.emoji}</span><div><h4 class="font-semibold text-[#3E2723]">${s.title}</h4><p class="text-xs text-[#5D4037]/70 font-light">${s.desc}</p></div></div>
+        </div>
+    </div>`;
+            if (i < orderSteps.length - 1) html += `<div class="text-center text-[#BCAAA4] text-xl">↓</div>`;
+            return html;
+        }).join('');
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
